@@ -1,0 +1,65 @@
+/* body {
+  background-image: linear-gradient(to right, #fdc883, #99c8f3);
+} */
+
+
+.video-container {
+  background-image: linear-gradient(to left, #fdc883, #99c8f3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure the video stays in the background */
+}
+
+.footer_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.card img { 
+  padding: 15px;
+  border-radius: 50px;
+ 
+}
+
+.card img:hover {
+  transform: translateY(-5px) scale(1.05);
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.card {
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  background-color: rgb(255, 243, 202);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+  font-weight: bolder;
+  font-variant: small-caps;
+}
+
+.card:hover {
+  background-color: #fdd8a7; /* Updated background color */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  margin-left: 30%;
+  border: 1px solid rgb(241, 35, 35);
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-color: white;
+  transform: translateY(-5px); /* Adjust the value as needed */
+}

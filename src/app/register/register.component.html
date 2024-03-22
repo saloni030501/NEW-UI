@@ -1,0 +1,24 @@
+<!-- HTML -->
+<app-navbar></app-navbar>
+<body>
+<form [formGroup]="registerForm" (ngSubmit)="submitDetails()" class="register-form">
+  <div class="form-container">
+  <div class="field">
+    <img src="../../assets/images/giphy.webp" alt="Profile Image">
+    <label for="fullName">FullName</label>
+    <input type="text" pInputText formControlName="fullName" class="w-full" name="fullName" placeholder="Type your name" />
+    <small *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="block p-error">
+      <div *ngIf="fullName.errors?.['required']">Name is required.</div>
+      <div *ngIf="fullName.errors?.['pattern']">Enter a valid Name</div>
+    </small>
+  </div>
+  <!-- Add other fields here -->
+ 
+<button class="custom-button register-button" (click)="redirectToLogin()">REGISTER</button>
+<button class="custom-button sign-in-button">SIGN IN</button>
+  </div>
+</form>
+
+
+</body>
+<app-footer></app-footer>

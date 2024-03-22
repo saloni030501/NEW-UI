@@ -1,0 +1,114 @@
+<app-navbar></app-navbar>
+
+<div>
+  <select class="custom-dropdown" (change)="filterBookings($event)">
+    <option value="active">Active Bookings</option>
+    <option value="completed">Completed Bookings</option>
+    <option value="deleted">Cancelled Bookings</option>
+  </select>
+</div>
+
+
+<div *ngIf="selectedFilter === 'active'">
+  <h2>Active Bookings</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Arrival Date</th>
+        <th>Departure Date</th>
+        <th>Number of People</th>
+        <th>Number of Rooms</th>
+        <th>Hotel Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of activeBookings">
+        <td>{{ booking.name }}</td>
+        <td>{{ booking.email }}</td>
+        <td>{{ booking.contactNumber }}</td>
+        <td>{{ booking.arrivalDate }}</td>
+        <td>{{ booking.departureDate }}</td>
+        <td>{{ booking.numberOfPeople }}</td>
+        <td>{{ booking.numberOfRooms }}</td>
+        <td>{{ booking.hotelName }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="softDeleteBooking(booking.id)">Cancel</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="selectedFilter === 'completed'">
+  <h2>Completed Bookings</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Arrival Date</th>
+        <th>Departure Date</th>
+        <th>Number of People</th>
+        <th>Number of Rooms</th>
+        <th>Hotel Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of completedBookings">
+        <td>{{ booking.name }}</td>
+        <td>{{ booking.email }}</td>
+        <td>{{ booking.contactNumber }}</td>
+        <td>{{ booking.arrivalDate }}</td>
+        <td>{{ booking.departureDate }}</td>
+        <td>{{ booking.numberOfPeople }}</td>
+        <td>{{ booking.numberOfRooms }}</td>
+        <td>{{ booking.hotelName }}</td>
+        <td>
+          <span>Completed</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="selectedFilter === 'deleted'">
+  <h2>Deleted Bookings</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Arrival Date</th>
+        <th>Departure Date</th>
+        <th>Number of People</th>
+        <th>Number of Rooms</th>
+        <th>Hotel Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of deletedBookings">
+        <td>{{ booking.name }}</td>
+        <td>{{ booking.email }}</td>
+        <td>{{ booking.contactNumber }}</td>
+        <td>{{ booking.arrivalDate }}</td>
+        <td>{{ booking.departureDate }}</td>
+        <td>{{ booking.numberOfPeople }}</td>
+        <td>{{ booking.numberOfRooms }}</td>
+        <td>{{ booking.hotelName }}</td>
+        <td>
+          <span>Cancelled</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>

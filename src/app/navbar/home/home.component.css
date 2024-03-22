@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body
+{
+  height:fit-content;
+
+}
+
+h1, h2, h3
+{
+  padding-bottom: 20px;
+}
+
+p
+{
+  margin: 10px 0;
+  text-align: justify;
+}
+header
+{
+ /* background-color: hsla(0, 0%, 15%, 1);
+  color: hsla(360, 100%, 100%, 1); */
+  top:0;
+  left:0;
+  width: 100%;
+}
+
+.container
+{
+  margin: auto;
+  
+  max-width: 1100px; /* This is the key, to bring elements together, and not spreaded*/
+  
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.text
+{
+  color: #f30e0e;
+}
+
+.lead
+{
+  font-size: 20px;
+}
+
+.btn
+{
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bolder;
+  color: white;
+  text-decoration: none;
+  padding: 13px 30px;
+  border-radius: 40px;
+  letter-spacing: 0.15em;
+  border-color: black;
+  cursor: pointer;
+}
+
+.btn:hover
+{
+  background: hsla(30, 87%, 75%, 1);
+  border: 1px solid hsla(30, 87%, 65%, 1);
+  color: hsla(0, 0%, 20%, 1);
+}
+
+.bg-dark
+{
+  background-color: hsla(0, 0%, 15%, 1);
+  color: hsla(360, 100%, 100%, 1);
+}
+
+.bg-light
+{
+  background-color: hsla(360, 100%, 100%, 1);
+  color: hsla(0, 0%, 15%, 1);
+}
+
+.bg-primary
+{
+  color: hsla(0, 0%, 15, 1);
+  background: #f7bf88;
+}
+
+
+
+/* Clears formatting from blocks above */
+
+.clr
+{
+  clear: both;
+}
+
+/* Showcase */
+/* #showcase {
+  background: url("https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260") no-repeat center center/cover;
+  height: 600px;
+  position: relative; Ensure z-index works correctly
+} */
+
+/* #showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); Adjust opacity as needed
+  backdrop-filter: blur(3px); Adjust blur radius as needed
+} */
+
+/* #showcase .container {
+  position: relative; Ensure z-index works correctly
+  z-index: 1; Ensure content appears above the blurred background
+}
+
+#showcase h1,
+#showcase p {
+  color: white; Set text color to black
+} */
+
+
+/* #showcase .showcase-content
+{
+  color: hsla(360, 100%, 100%, 1);
+  text-align: center;
+  padding-top: 170px;
+} */
+
+/* #showcase .showcase-content h1
+{
+  font-size: 60px;
+  line-height: 1.2em;
+}
+
+#showcase .showcase-content p
+{
+  padding-bottom: 20px;
+  line-height: 1.7em;
+} */
+
+/* Home info */
+
+#home-info
+{
+  height: 400px;
+}
+
+#home-info .info-image {
+  width: 50%;
+  float: left;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery {
+  --s: 150px; /* the image size */
+  
+  display: grid;
+  transform-style: preserve-3d;
+  animation: r 15s linear infinite;
+  position: relative;
+}
+@keyframes r {
+  0% {transform: perspective(450px) rotateX(-100deg) rotate(0deg)}
+  to {transform: perspective(450px) rotateX(-100deg) rotate(-360deg)}
+}
+.gallery > img {
+  grid-area: 1/1;
+  width: var(--s);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transform: rotate(var(--_a)) translateY(120%) rotateX(90deg);
+}
+.gallery > img:nth-child(1) {--_a: 0deg}
+.gallery > img:nth-child(2) {--_a: 60deg}
+.gallery > img:nth-child(3) {--_a: 120deg}
+.gallery > img:nth-child(4) {--_a: 180deg}
+.gallery > img:nth-child(5) {--_a: 240deg}
+.gallery > img:nth-child(6) {--_a: 300deg}
+
+.gallery::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  clip-path: polygon(50% 0,calc(50% + .866*50%) 25%,calc(50% + .866*50%) 75%,50% 100%,calc(50% - .866*50%) 75%,calc(50% - .866*50%) 25%);
+  background: #f7bf88;
+  transform: translateZ(calc(var(--s)/2)) rotate(90deg);
+}
+
+#home-info .info-content
+{
+  width: 50%;
+  float: right;
+  height: 100%;
+  text-align: center;
+  padding: 50px 30px;
+  overflow: hidden;
+}
+
+#home-info .info-content a
+{
+  margin-top: 20px;
+}
+
+/* Features */
+#features
+{
+  height: 300px;
+  display: flex;
+  text-align: center;
+  overflow: hidden;
+}
+
+#features .location
+{
+  width: 33%;
+  float: left;
+}
+
+#features i
+{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#features p
+{
+  padding: 0 10px;
+}
+
+#features .meals
+{
+  width: 33%;
+}
+
+#features .fitness
+{
+  width: 33%;
+  float: right;
+}
+
+.card {
+  border-radius: 15px; /* Add border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+  margin: 0 10px; /* Add margin to create spacing between cards */
+  height: max-content;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up on hover for a pop-out effect */
+}
+
+.card-body {
+  padding: 2rem 1rem 2rem 1rem;; /* Add padding for spacing inside the card */
+}
+
+.card-body .bi {
+  color: #f30e0e; /* Change the color to blue */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Initial font size for the title */
+  margin-bottom: 1rem; /* Add margin at the bottom of the title */
+  overflow: hidden; /* Hide overflow to ensure animation works properly */
+  white-space: nowrap; /* Prevent text from wrapping */
+  color:#fc9b39; 
+  font-weight: bolder;
+}
+.card-text {
+  font-size: 1rem; /* Set font size for the text */
+}
+
+.row {
+  align-items: center;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Start position: move up 50 pixels */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End position: normal position */
+  }
+}
+
+.info-content h2 {
+  animation: slideIn 5s ease-out; /* Apply animation to the h2 element */
+}
+
+
+@media only screen and (max-width: 767px) {
+  /* Adjust styles for smaller screens */
+  .container {
+    max-width: 100%; /* Make container full width */
+    padding: 0 15px; /* Adjust padding for smaller screens */
+  }
+  #home-info .info-image,
+  #home-info .info-content {
+    width: 100%; /* Make both image and content sections full width */
+    float: none; /* Remove floating */
+    margin: 0; /* Remove any margins */
+    max-width: none; /* Remove any max-width */
+  }
+  #features {
+    flex-wrap: wrap; /* Allow features to wrap */
+  }
+  #features .location,
+  #features .meals,
+  #features .fitness {
+    width: 100%; /* Make feature sections full width */
+    margin-bottom: 20px; /* Add margin between feature sections */
+  }
+  #features i {
+    margin-top: 10px; /* Adjust icon margin */
+    margin-bottom: 10px; /* Adjust icon margin */
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust styles for medium-sized screens */
+  #home-info .info-image,
+  #home-info .info-content {
+    width: 50%; /* Make both image and content sections half width */
+    float: none; /* Remove floating */
+    max-width: none; /* Remove any max-width */
+  }
+
+  /* Adjust styles for features section */
+  #features {
+    height: auto; /* Set height of features section to auto */
+    display: flex; /* Use flexbox for better layout */
+    flex-wrap: wrap; /* Allow features to wrap */
+    justify-content: space-between; /* Distribute features evenly */
+  }
+
+  /* Adjust styles for feature sections */
+  #features .location,
+  #features .meals,
+  #features .fitness {
+    width: calc(33.33% - 20px); /* Make feature sections one-third width with margin */
+    margin-bottom: 20px; /* Add margin between feature sections */
+  }
+
+  /* Adjust styles to prevent overlap between .info-content and .location */
+  #home-info .info-content {
+    margin-bottom: 40px; /* Increase the margin at the bottom of info-content */
+  }
+
+  /* Ensure .location stays on its own line */
+  #features .location {
+    clear: both;
+    margin-top: 20px; /* Add margin to separate .location from previous elements */
+  }
+}

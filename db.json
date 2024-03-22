@@ -1,0 +1,215 @@
+{
+  "hotels": [
+    {
+      "id": "1",
+      "name": "Hotel Alpha",
+      "city": "New York",
+      "area": "Manhattan",
+      "availableRooms": 10,
+      "price": "$150 per night"
+    },
+    {
+      "id": "2",
+      "name": "Hotel Beta",
+      "city": "London",
+      "area": "Westminster",
+      "availableRooms": 10,
+      "price": "$180 per night"
+    },
+    {
+      "id": "3",
+      "name": "Hotel Gamma",
+      "city": "Paris",
+      "area": "Le Marais",
+      "availableRooms": 10,
+      "price": "$200 per night"
+    },
+    {
+      "id": "4",
+      "name": "Hotel Delta",
+      "city": "Tokyo",
+      "area": "Shinjuku",
+      "availableRooms": 10,
+      "price": "$160 per night"
+    },
+    {
+      "id": "5",
+      "name": "Hotel Epsilon",
+      "city": "Dubai",
+      "area": "Downtown Dubai",
+      "availableRooms": 10,
+      "price": "$$220 per night"
+    },
+    {
+      "id": "6",
+      "name": "Hotel Zeta",
+      "city": "Sydney",
+      "area": "Central Business District",
+      "availableRooms": 10,
+      "price": "$190 per night"
+    },
+    {
+      "id": "7",
+      "name": "Hotel Eta",
+      "city": "Rome",
+      "area": "Trastevere",
+      "availableRooms": 10,
+      "price": "$170 per night"
+    },
+    {
+      "id": "8",
+      "name": "Hotel Theta",
+      "city": "Barcelona",
+      "area": "Barri Gòtic",
+      "availableRooms": 10,
+      "price": "$210 per night"
+    }
+  ],
+  "users": [
+    {
+      "fullName": "test user",
+      "email": "test1@gmail.com",
+      "password": "1234",
+      "id": "1"
+    },
+    {
+      "fullName": "test Data",
+      "email": "test@gmail.com",
+      "password": "1234",
+      "id": "2"
+    },
+    {
+      "id": "9075",
+      "fullName": "sarthak wagh",
+      "email": "sarthak@info.com",
+      "password": "Sarthak@123"
+    },
+    {
+      "id": "9ebb",
+      "fullName": "gagan baghel",
+      "email": "gagan@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "1e51",
+      "fullName": "Parth Raundal",
+      "email": "parthr@cybage.com",
+      "password": "Parth@101"
+    },
+    {
+      "id": "497d",
+      "fullName": "Suyog mankar",
+      "email": "suyog@gmail.com",
+      "password": "Suyog@123"
+    },
+    {
+      "id": "dd33",
+      "fullName": "a",
+      "email": "a@gmail.com",
+      "password": "A",
+      "hasPanCard": ""
+    },
+    {
+      "id": "726e",
+      "fullName": "b",
+      "email": "b@gmail.com",
+      "password": "abc",
+      "hasPanCard": "yes"
+    },
+    {
+      "id": "b60b",
+      "fullName": "c",
+      "email": "c@gmail.com",
+      "password": "1234",
+      "hasPanCard": "yes"
+    },
+    {
+      "id": "fe16",
+      "fullName": "shreya",
+      "email": "s@gmail.com",
+      "password": "1234",
+      "hasPanCard": "yes"
+    },
+    {
+      "id": "0fa2",
+      "fullName": "da",
+      "email": "da@gmail.com",
+      "password": "da",
+      "hasPanCard": "yes"
+    },
+    {
+      "id": "11f8",
+      "fullName": "abc",
+      "email": "abc@gmail.com",
+      "password": "abc"
+    },
+    {
+      "id": "239d",
+      "fullName": "saloni deshmukh",
+      "email": "salonideshmukh@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "contactNumber": "1234567890",
+      "arrivalDate": "2024-03-20",
+      "departureDate": "2024-03-25",
+      "numberOfPeople": 2,
+      "numberOfRooms": 1
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "contactNumber": "9876543210",
+      "arrivalDate": "2024-04-10",
+      "departureDate": "2024-04-15",
+      "numberOfPeople": 3,
+      "numberOfRooms": 2
+    },
+    {
+      "id": "a531",
+      "name": "Parth Raundal",
+      "email": "parthr@cybage.com",
+      "contactNumber": "8208182733",
+      "arrivalDate": "2024-03-21",
+      "departureDate": "2024-03-30",
+      "numberOfPeople": 5,
+      "numberOfRooms": 2
+    },
+    {
+      "id": "0c93",
+      "name": "roshan",
+      "email": "roshan@gmail.com",
+      "contactNumber": "1236547898",
+      "arrivalDate": "2024-03-16",
+      "departureDate": "2024-03-21",
+      "numberOfPeople": 2,
+      "numberOfRooms": 1
+    },
+    {
+      "id": "4051",
+      "name": "Sarthak Wagh",
+      "email": "sarthak@gmail.com",
+      "contactNumber": "9874563211",
+      "arrivalDate": "2024-03-20",
+      "departureDate": "2024-03-22",
+      "numberOfPeople": 1,
+      "numberOfRooms": 1
+    },
+    {
+      "id": "27e8",
+      "name": "Saloni Deshmukh",
+      "email": "salonideshmukh@gmail.com",
+      "contactNumber": "9874563211",
+      "arrivalDate": "2024-03-21",
+      "departureDate": "2024-03-22",
+      "numberOfPeople": 1,
+      "numberOfRooms": 1
+    }
+  ]
+}

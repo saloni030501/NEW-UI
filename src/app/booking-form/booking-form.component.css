@@ -1,0 +1,106 @@
+
+
+
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: Arial, sans-serif;
+	background-image: url("../../assets/images/form.jpg");
+	background-size: cover; /* Ensure the background image covers the entire viewport */
+}
+
+  .wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+  }
+
+  .content {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 100px); /* Adjust as needed */
+  }
+
+  #app-navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 0;
+	text-align: center;
+  }
+
+  #app-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 0;
+	text-align: center;
+  }
+
+  .booking-form {
+    background-color: #ffe8cb;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 15em;
+    opacity: 0;
+    transform: scale(0.5); /* Initially set smaller scale */
+    animation: popOut 0.5s ease forwards; /* Apply pop-out animation */
+}
+
+@keyframes popOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Start with smaller scale */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Pop out to full scale */
+    }
+}
+
+
+  .form-header h1 {
+	margin: 0;
+  }
+
+  .form-group {
+	margin-bottom: 20px;
+  }
+
+  .form-label {
+	font-weight: bold;
+  }
+
+  .form-control {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+
+  .error {
+	color: red;
+  }
+
+  .submit-btn {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+
+  .submit-btn:hover {
+	background-color: #555;
+  }

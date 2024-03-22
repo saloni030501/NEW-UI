@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="input-container">
+    <label>Search: <input type="text" [(ngModel)]="searchText" (input)="search()"></label>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col" *ngFor="let hotel of filteredHotels">
+      <div class="card">
+        <img [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7X0QNtEVS7I3lVqaQBSs2uRMlgHcZknBIFco9Sj2IZyTAP3Hd9p92mGPFhKROD6md5yA&usqp=CAU'" alt="Hotel Image" class="card-img-top" style="height: 250px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ hotel.name }}</h5>
+          <p class="card-text">City: {{ hotel.city }}</p>
+          <p class="card-text">Area: {{ hotel.area }}</p>
+          <p class="card-text">Available Rooms: {{ hotel.availableRooms }}</p>
+          <div class="ratings">
+            <span class="rating">{{ hotel.rating }}</span>
+            <span class="stars">
+              <ng-container *ngFor="let star of getStarArray(hotel.rating)">
+                <span class="bi bi-star-fill text-warning"></span>
+
+              </ng-container>
+            </span>
+          </div>
+          <p class="card-text">Price: {{ hotel.price }}</p>
+        </div>
+        <div class="card-footer">
+          <a [href]="'/booking-form/' + hotel.id" class="btn">Book Now</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

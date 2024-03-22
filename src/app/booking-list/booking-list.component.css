@@ -1,0 +1,51 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #5756e6;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f7bf88;
+    color: black;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f7bf88;
+  }
+  
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: #fff;
+  }
+  
+  .btn {
+    background-color: #dc3545;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px; /* Updated border radius */
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #f7bf88;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color:#f7bf88;
+  }
+  
+  .custom-dropdown {
+    width: 200px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+  }

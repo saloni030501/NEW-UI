@@ -1,0 +1,115 @@
+/* CSS */
+
+body {
+    background-image: url("../../assets/images/form.jpg");
+    background-size: cover;
+    
+    height: 100vh;
+}
+
+.register-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    /* Ensure the form is positioned relative to its container */
+   
+    animation: popOut 0.5s ease-in-out forwards; /* Apply animation to the form */
+}
+
+@keyframes popOut {
+    0% {
+      transform: scale(0);
+    }
+    80% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+.form-container {
+    width: 360px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fad4a5;
+    /* Add background color with transparency */
+}
+
+.field {
+    margin-bottom: 1.5rem;
+}
+
+/* Add styles for the profile image */
+.field img {
+    /* Styles for the image */
+    width: 100px; /* Adjust the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    margin-left: 50%;
+    transform: translateX(-50%); /* Move the image left by 50% of its own width to center it horizontally */
+    border-radius: 50%;
+  }
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+small {
+    color: red;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-in-button,
+.register-button {
+    width: calc(50% - 5px);
+    /* Adjust the spacing between buttons by changing the value */
+    display: inline-block;
+    /* Set buttons to display inline */
+    margin-right: 5px;
+    /* Add margin between buttons */
+}
+
+.sign-in-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-in-button:hover {
+    background-color: #555;
+}
+
+.register-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #555;
+}

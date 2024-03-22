@@ -1,0 +1,92 @@
+
+  <app-navbar></app-navbar>
+
+<body>
+<div id="booking" class="section">
+  <div class="section-center">
+    <div class="container">
+      <div class="row">
+        <div class="booking-form">
+          <div class="form-header">
+            <h1>Hotel Booking Form</h1>
+          </div>
+          <form [formGroup]="bookingForm" (ngSubmit)="submitForm()">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name" class="form-label">Name of Customer:</label>
+                  <input type="text" id="name" formControlName="name" class="form-control" placeholder="Type your Name" required>
+                  <div *ngIf="bookingForm.get('name')?.invalid && (bookingForm.get('name')?.dirty || bookingForm.get('name')?.touched)">
+                    <span class="error">Name is required.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" id="email" formControlName="email" class="form-control" placeholder="Type your email" required>
+                  <div *ngIf="bookingForm.get('email')?.invalid && (bookingForm.get('email')?.dirty || bookingForm.get('email')?.touched)">
+                    <span class="error">Email is required and must be a valid email address.</span>
+                  </div>
+                </div> 
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="contactNumber" class="form-label">Mobile Number:</label>
+                  <input type="tel" id="contactNumber" formControlName="contactNumber" class="form-control" placeholder="Type your mobile number" required>
+                  <div *ngIf="bookingForm.get('contactNumber')?.invalid && (bookingForm.get('contactNumber')?.dirty || bookingForm.get('contactNumber')?.touched)">
+                    <span class="error">Mobile number is required.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="arrivalDate" class="form-label">Check-in:</label>
+                  <input type="date" id="arrivalDate" formControlName="arrivalDate" class="form-control" required>
+                  <div *ngIf="bookingForm.get('arrivalDate')?.invalid && (bookingForm.get('arrivalDate')?.dirty || bookingForm.get('arrivalDate')?.touched)">
+                    <span class="error">Check-in date is required.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="departureDate" class="form-label">Check-out:</label>
+                  <input type="date" id="departureDate" formControlName="departureDate" class="form-control" required>
+                  <div *ngIf="bookingForm.get('departureDate')?.invalid && (bookingForm.get('departureDate')?.dirty || bookingForm.get('departureDate')?.touched)">
+                    <span class="error">Check-out date is required.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="numberOfPeople" class="form-label">Number of People</label>
+                  <input type="number" id="numberOfPeople" formControlName="numberOfPeople" class="form-control" placeholder="Type Number of people" required>
+                  <div *ngIf="bookingForm.get('numberOfPeople')?.invalid && (bookingForm.get('numberOfPeople')?.dirty || bookingForm.get('numberOfPeople')?.touched)">
+                    <span class="error">Number of People is required.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="numberOfRooms" class="form-label">Number of Rooms</label>
+                  <input type="number" id="numberOfRooms" formControlName="numberOfRooms" class="form-control" placeholder="Type Number of Rooms" required>
+                  <div *ngIf="bookingForm.get('numberOfRooms')?.invalid && (bookingForm.get('numberOfRooms')?.dirty || bookingForm.get('numberOfRooms')?.touched)">
+                    <span class="error">Number of Rooms is required.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more form fields here following the same structure -->
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+<app-footer></app-footer>
+
+
